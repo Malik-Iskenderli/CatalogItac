@@ -110,13 +110,23 @@ main.frame-media{
   right: 20vw;
 }
 .fixed{
-  /* background-color: white; */
-  width: calc(var(--index) * (var(--side-small) / 2));
+  width: calc(var(--index) * (var(--side-small) / 5));
   height: calc(var(--index) * (var(--side-big) / 2));
   position: fixed;
-  left: 0;
-  top: calc(var(--index) * 5);
-  /* color: black; */
-  /* opacity: 1 !important; */
+  left: 20px;
+  top: calc(var(--index) * 8);
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.fix-btn, .fix-btn-vent,
+.fix-btn-kitchen, .fix-btn-decor,
+.fix-btn-a_frame, .fix-btn-mtk, .fix-btn-door{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
 }
