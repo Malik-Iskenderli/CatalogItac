@@ -1,12 +1,12 @@
 import React from 'react'
-import Havalandirma from "../assets/componentsAssets/Havalandirma.jpg"
+import Havalandirma from "../assets/componentsAssets/2.MOV"
 const VentilationImage = () => {
   return (
     <div className='frame frame-bg'>
-    <div className="frame__content">
-      <main className="frame-media frame-media_right" style={{ backgroundImage: `url(${Havalandirma})` }}></main>
+      <div className="frame__content">
+        <video className="frame-media frame-media_2 frame-media_right" src={Havalandirma} autoPlay loop muted></video>
+      </div>
     </div>
-  </div>
   )
 }
 

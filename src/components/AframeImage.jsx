@@ -1,11 +1,11 @@
 import React from 'react'
-import Aframe from "../assets/componentsAssets/AframeHouse.jpeg"
+import Aframe from "../assets/componentsAssets/5.mp4"
 
 const AframeImage = () => {
   return (
     <div className='frame frame-bg'>
     <div className="frame__content">
-      <div className="frame-media frame-media_left" style={{ backgroundImage: `url(${Aframe})` }}></div>
+      <video className="frame-media frame-media_left" src={Aframe} autoPlay loop muted></video>
     </div>
 </div>
   )

@@ -1,15 +1,14 @@
-import React from 'react'
-import MetalKonstrukciya from "../assets/componentsAssets/metal_konstrukciya.jpg"
-import { useNavigate } from 'react-router'
+import React, { useRef } from 'react'
+import MetalKonstrukciya from "../assets/componentsAssets/1.MP4"
 
 const MetalConstructionImage = () => {
-  const navigate = useNavigate()
+
   return (
     <div className='frame frame-bg'>
-    <div className="frame__content">
-      <div className="frame-media frame-media_left" onClick={()=> navigate('/metal')} style={{ backgroundImage: `url(${MetalKonstrukciya})` }}></div>
+      <div className="frame__content">
+        <video  className="frame-media frame-media_left"   autoPlay loop muted src={MetalKonstrukciya} ></video>
+      </div>
     </div>
-  </div>
   )
 }
 

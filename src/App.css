@@ -74,10 +74,17 @@ h1, h2, h3, h4{
 }
 .frame-media{
   position: relative;
-  width: calc(var(--index)* var(--side-small));
-  height: calc(var(--index)* var(--side-big));
+  width: calc(var(--index)* var(--side-small)) ;
+  height: calc(var(--index)* var(--side-big)) ;
   background-position: center;
   background-size: cover;
+}
+.frame-media{
+  border-radius: 20%;
+}
+video.frame-media_b{
+  width: calc(var(--index) * var(--side-small) ) ;
+  height: calc(var(--index)* var(--side-big)) ;
 }
 .frame-media_left{
   right: calc(var(--side-small) / 2 * var(--index) + var(--gutter) * 2);
@@ -89,10 +96,15 @@ h1, h2, h3, h4{
 .frame-bg{
   background-color: rgb(0 0 0 / .87);
 }
-main.frame-media{
+main.frame-media {
   width: calc(var(--index) * var(--side-big) );
   height: calc(var(--index) * var(--side-small));
 }
+video.frame-media_2{
+  width: calc(var(--index) * var(--side-big) );
+  height: calc(var(--index) * var(--side-small));
+}
+
 .text-right > *{
   position: relative;
   left: 18vw;
@@ -110,16 +122,19 @@ main.frame-media{
   right: 20vw;
 }
 .fixed{
-  width: calc(var(--index) * (var(--side-small) / 5));
+  width: 10%;
   height: calc(var(--index) * (var(--side-big) / 2));
   position: fixed;
   left: 20px;
-  top: calc(var(--index) * 8);
+  top: 20% ;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
+  /* background-color: red; */
+  z-index: 9999999;
+  transition: 0.4s ease-in;
 }
 .fix-btn, .fix-btn-vent,
 .fix-btn-kitchen, .fix-btn-decor,
@@ -128,5 +143,12 @@ main.frame-media{
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  overflow: hidden;
+  transition: 0.4s ease-in;
+  /* overflow: hidden; */
+}
+.fix-btn span, .fix-btn-vent span,
+.fix-btn-kitchen span, .fix-btn-decor span,
+.fix-btn-a_frame span, .fix-btn-mtk span, .fix-btn-door span{
+color: red;
+transition: 0.4s ease-in;
 }

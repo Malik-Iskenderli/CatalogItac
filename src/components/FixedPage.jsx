@@ -1,12 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const FixedPage = () => {
   const navigate = useNavigate()
+  const [mouse , setMouse] =useState(false);
 
 
+  // const handleMouseLeave = () => {
+  //   setMouse(false)
+  // }
+
+ 
   return (
-    < div className='fixed'>
+    <div className='fixed'
+     onMouseEnter={()=>{setMouse(true)}}
+      onMouseLeave={()=>{setMouse(false)}}
+      
+      >
+     
       <div className='fix-btn' onClick={() => { navigate("/metal") }}>
         <lord-icon
           src="https://cdn.lordicon.com/bauutlwk.json"
@@ -15,7 +26,9 @@ const FixedPage = () => {
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
 
-        <span id='yazi'>Metal</span>
+        <span id='yazi' 
+        style={{ opacity: mouse ? '1' : '0' }}
+        >Metal</span>
       </div>
 
       <div className='fix-btn-vent' onClick={() => { navigate("/ventilation") }}>
@@ -26,7 +39,9 @@ const FixedPage = () => {
           delay="500"
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
-        <span>Ventilation</span>
+        <span
+        style={{ opacity: mouse ? '1' : '0' }}
+        >Havalandırma</span>
       </div>
       <div className='fix-btn-kitchen' onClick={() => { navigate("/kitchen") }}>
         <lord-icon
@@ -35,16 +50,20 @@ const FixedPage = () => {
           delay="500"
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
-        <span>Kitchen</span>
+        <span
+        style={{ opacity: mouse ? '1' : '0' }}
+        >Mətbəx</span>
       </div>
-      <div className='fix-btn-door' onClick={() => { navigate("/door") }}>
+      <div className='fix-btn-door' onClick={() => { navigate("/door") }} >
       <lord-icon
           src="https://cdn.lordicon.com/twhkqyqy.json"
           trigger="loop"
           delay="500"
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
-         <span>Door</span>
+         <span
+         style={{ opacity: mouse ? '1' : '0' }}
+         >Qapı və pəncərə</span>
          </div>
       <div  className='fix-btn-a_frame' onClick={() => { navigate("/a-frame") }}>
       <lord-icon
@@ -53,7 +72,9 @@ const FixedPage = () => {
           delay="500"
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
-         <span>A frame</span>
+         <span
+         style={{ opacity: mouse ? '1' : '0' }}
+         >A frame</span>
          </div>
       <div className='fix-btn-decor' onClick={() => { navigate("/decor") }}> 
       <lord-icon
@@ -62,7 +83,9 @@ const FixedPage = () => {
           delay="500"
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
-      <span>Decor</span>
+      <span
+      style={{ opacity: mouse ? '1' : '0' }}
+      >Decor</span>
       </div>
       <div className='fix-btn-mtk' onClick={() => { navigate("/mtk") }}> 
       <lord-icon
@@ -71,58 +94,13 @@ const FixedPage = () => {
           delay="500"
           style={{ width: "40px", height: "40px" }}>
         </lord-icon>
-      <span>MTK</span>
+      <span
+      style={{ opacity: mouse ? '1' : '0' }}
+      >MTK</span>
       </div>
     </div>
   )
 }
 
 export default FixedPage
-
-
-
-// import React, { useState } from 'react';
-
-// const FixedPage = () => {
-//   const [showNames, setShowNames] = useState(false);
-
-//   const items = [
-//     { name: 'Metal', icon: 'metal-icon.png' },
-//     { name: 'Ventilation', icon: 'ventilation-icon.png' },
-//     { name: 'Kitchen', icon: 'kitchen-icon.png' },
-//     { name: 'Door', icon: 'door-icon.png' },
-//     { name: 'Aframe', icon: 'aframe-icon.png' },
-//     { name: 'Decor', icon: 'decor-icon.png' },
-//     { name: 'Mtk', icon: 'mtk-icon.png' },
-//   ];
-
-//   return (
-//     <div className='fixed'>
-//       <div className="navbar">
-//         {items.map((item, index) => (
-//           <div
-//             key={index}
-//             className="navbar-item"
-//             onMouseEnter={() => setShowNames(true)}
-//             onMouseLeave={() => setShowNames(false)}
-//           >
-//             <img src={item.icon} alt={item.name} />
-//           </div>
-//         ))}
-//       </div>
-//       {showNames && (
-//         <div className="item-names">
-//           {items.map((item, index) => (
-//             <div key={index} className="item-name">
-//               {item.name}
-//             </div>
-//           ))}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default FixedPage;
-
 
