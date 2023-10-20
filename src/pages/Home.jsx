@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import MetalKonstrukciya from '../assets/componentsAssets/metal_konstrukciya.jpg';
+import ItacVideo from '../assets/componentsAssets/itacindustry.mp4';
 import TitleName from '../components/TitleName';
 import Void from '../components/Void';
 import MetalConstructiuonText from '../components/MetalConstructiuonText';
@@ -50,10 +50,48 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+
+    const metalSectionTop = 0; 
+    const ventilationSectionTop = metalSectionTop + 500;
+    const kitchenSectionTop = ventilationSectionTop + 500;
+    const doorSectionTop = kitchenSectionTop + 400;
+    const aframeSectionTop = doorSectionTop + 400;
+    const decorSectionTop = aframeSectionTop + 400;
+    const mtkSectionTop = decorSectionTop + 400;
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY >= metalSectionTop && scrollY < ventilationSectionTop) {
+        setActiveSection('metal');
+      } else if (scrollY >= ventilationSectionTop && scrollY < kitchenSectionTop) {
+        setActiveSection('ventilation');
+      } else if (scrollY >= kitchenSectionTop && scrollY < doorSectionTop) {
+        setActiveSection('kitchen');
+      } else if (scrollY >= doorSectionTop && scrollY < aframeSectionTop) {
+        setActiveSection('door');
+      } else if (scrollY >= aframeSectionTop && scrollY < decorSectionTop) {
+        setActiveSection('aframe');
+      } else if (scrollY >= decorSectionTop && scrollY < mtkSectionTop) {
+        setActiveSection('decor');
+      } else if (scrollY >= mtkSectionTop) {
+        setActiveSection('mtk');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
     return (
         <>
             <div className="container">
-            <FixedPage/>
+            <FixedPage activeSection={activeSection} />
                 <section className='gallery'>
                     <TitleName />
                     <Void />
@@ -80,7 +118,7 @@ const Home = () => {
                     <Void/>
                     <div className='frame '>
                         <div className="frame__content">
-                            <div className="frame-media " style={{ backgroundImage: `url(${MetalKonstrukciya})` }}></div>
+                            <video className="frame-media " autoPlay loop muted src={ItacVideo}></video>
                         </div>
                     </div>
 

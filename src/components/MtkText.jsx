@@ -5,7 +5,7 @@ const MtkText = () => {
     <div className='frame'>
     <div className="frame__content text-right">
       <h3>MTK</h3>
-      <p>Menzil Tikinti Korporotivleri ucun sifaris esasinda metal konstrukcilayarin istehsali ve qurasdirilmasi </p>
+      <p>Mənzil Tikinti Korporotivləri üçün sifariş əsasında metal konstruksilayarın istehsalı və qurasdırılması </p>
     </div>
   </div>
   )

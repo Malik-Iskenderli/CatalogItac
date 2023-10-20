@@ -1,11 +1,11 @@
 import React from 'react'
-import Mtk from "../assets/componentsAssets/Mtk.jpg"
+import Mtk from "../assets/componentsAssets/7.MP4"
 
 const MtkImage = () => {
   return (
     <div className='frame frame-bg'>
     <div className="frame__content">
-      <div className="frame-media frame-media_left" style={{ backgroundImage: `url(${Mtk})` }}></div>
+      <video className="frame-media frame-media_left"muted loop autoPlay src={Mtk}></video>
     </div>
     </div>
   )

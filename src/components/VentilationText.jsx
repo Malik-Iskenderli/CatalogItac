@@ -4,8 +4,10 @@ const VentilationText = () => {
   return (
     <div className='frame'>
       <div className="frame__content text-left">
-        <h3>Havalandirma sistemleri</h3>
-        <p>Havalandirma sistemleri,kanal tipli kondisioner sistemlerin quraşdirilma ve temiri isleri</p>
+        <h3>Havalandırma sİstemlərİ</h3>
+        {/* <p>Havalandırma sistemləri,kanal tipli kondisioner sistemlərin quraşdırılması</p> */}
+        <p> Kafe,restoran,zavod və digər növ istehsal və qeyri istehsal müəsisələr üçün hava sistemlərinin quraşdırılması</p>
+
       </div>
     </div>
   )

@@ -4,8 +4,8 @@ const KitchenText = () => {
   return (
     <div className='frame'>
     <div className="frame__content text-right">
-      <h3>Metbex avadanliqlari</h3>
-      <p>Paslanmaz poladdan metbex ve mebel avadanliqlari</p>
+      <h3>Mətbəx avadanlıqları</h3>
+      <p>Paslanmaz poladdan mətbəx və mebel avadanlıqları</p>
     </div>
   </div>
   )

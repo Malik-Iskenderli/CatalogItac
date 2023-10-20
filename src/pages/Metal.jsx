@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "../App.css"
 import Void from '../components/Void';
-import M1 from '../assets/pagesAssets/1_1.webp';
-import M2 from '../assets/pagesAssets/1_2.jpg';
-import M3 from '../assets/pagesAssets/1_3.webp';
+import M1 from '../assets/pagesAssets/1_1.jpg';
+import M2 from '../assets/pagesAssets/1_5.jpg';
+import M3 from '../assets/pagesAssets/1_3.jpeg';
 import M4 from '../assets/pagesAssets/1_4.jpg';
-import M5 from '../assets/pagesAssets/1_5.jpg';
+import M5 from '../assets/pagesAssets/1_2.jpg';
 import BtnBack from '../components/Button/BtnBack';
 
 
@@ -48,8 +48,9 @@ const Metal = () => {
         <Void />
         <div className='frame metalFrame'>
           <div className="frame__content text-right">
-            <h3>Müasir rəflərin hazırlanması</h3>
-            <p>Sizin ev dizaynına uyğun müxtəlif növ Rəflərin metal konstruksiyadan peşəkar səviyyədə yığılması </p>
+            <h3>Metaldan və nerjdən hazırlanma mebellərİn İstehsalı</h3>
+            <p>Ev dekor mebelləri</p>
+            <p>99 AZN-dən başlayan qiymətlərlə</p>
           </div>
         </div>
         <div className='frame frame-bg'>
@@ -58,22 +59,24 @@ const Metal = () => {
           </div>
         </div>
         <Void />
-        <div className='frame'>
-          <div className="frame__content text-left">
-            <h3>işıqlı reklamların hazırlanması</h3>
-            <p>Sizin istəyinizə uyğun dizaynda işıqlı reklamların hazırlanması bizim işimizdir.</p>
+        <div className='frame metalFrame'>
+          <div className="frame__content text-right">
+            <h3>Metal stol və stullar</h3>
+            <p>Müxtəlif növ stulların metal konstruksiyadan yığılması </p>
+            <p>159 AZN-dən başlayan qiymətlərlə </p>
           </div>
         </div>
         <div className='frame frame-bg'>
           <div className="frame__content">
-            <main className="frame-media frame-media_right" style={{ backgroundImage: `url(${M2})` }}></main>
+            <div className="frame-media frame-media_left" style={{ backgroundImage: `url(${M5})` }}></div>
           </div>
-        </div>
+        </div>     
         <Void />
         <div className='frame metalFrame'>
           <div className="frame__content text-right">
-            <h3>Sonsuz masa</h3>
-            <p>Sizin ev dizaynına uyğun müxtəlif növ Infinity effekti yaradan masaların metal konstruksiyadan peşəkar səviyyədə yığılması</p>
+            <h3>Sonsuzluq EFEKTİ İlə jurnal və yemək masası</h3>
+            <p> Müxtəlif növ Infinity effekti yaradan masaların istehsalı</p>
+            <p>199 AZN-dən başlayan qiymətlərlə </p>
           </div>
         </div>
         <div className='frame frame-bg'>
@@ -84,8 +87,9 @@ const Metal = () => {
         <Void />
         <div className='frame'>
           <div className="frame__content text-left">
-            <h3>üzən çarpayı</h3>
-            <p>Müxtəlif çarpayıların metal konstruksiyadan yığılması</p>
+            <h3>HAVADA ASILLIQ EFEKTİ YARADAN ÇARPAYI </h3>
+            <p>Müxtəlif çarpayıların və yataq dəstlərinin istehsalı</p>
+            <p>179 AZN-dən başlayan qiymətlərlə</p>
           </div>
         </div>
         <div className='frame frame-bg'>
@@ -94,15 +98,17 @@ const Metal = () => {
           </div>
         </div>
         <Void />
-        <div className='frame metalFrame'>
-          <div className="frame__content text-right">
-            <h3>Metal stullar</h3>
-            <p>Müxtəlif növ stulların metal konstruksiyadan yığılması </p>
+        <div className='frame'>
+          <div className="frame__content text-left">
+            <h3>İşıqlı reklam panellərİn İstehsalı</h3>
+            <p>Kafe,restoran və digər ictimai iaşə obyektlər üçün işıqlı reklam panellərinin istehsalı</p>
+            <p>89 AZN-dən başlayan qiymətlərlə</p>
+
           </div>
         </div>
         <div className='frame frame-bg'>
           <div className="frame__content">
-            <div className="frame-media frame-media_left" style={{ backgroundImage: `url(${M5})` }}></div>
+            <main className="frame-media frame-media_right" style={{ backgroundImage: `url(${M2})` }}></main>
           </div>
         </div>
       </section>

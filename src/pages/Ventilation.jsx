@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "../App.css"
 import Void from '../components/Void';
-import V1 from "../assets/pagesAssets/2_1jpg.jpg"
-import V2 from "../assets/pagesAssets/2_2.jpeg"
-
-import MetalKonstrukciya from '../assets/componentsAssets/metal_konstrukciya.jpg';
-import Havalandirma from "../assets/componentsAssets/Havalandirma.jpg"
+import V1 from "../assets/pagesAssets/2_1.jpg"
+import V2 from "../assets/pagesAssets/2_2.jpg"
+import V3 from "../assets/pagesAssets/2_3.jpg"
 import BtnBack from '../components/Button/BtnBack';
 const Ventilation = () => {
   const [zVals, setZVals] = useState([]);
@@ -46,8 +44,9 @@ const Ventilation = () => {
         <Void />
         <div className='frame metalFrame'>
           <div className="frame__content text-right">
-            <h3>Havalandırma sistemləri</h3>
-            <p>Havalandırma sistemləri bütün inzibati və yaşayış binalarında quraşdırılması</p>
+            <h3>müəsİsələr üçün Havalandırma sİstemlərİ</h3>
+            <p>Broler təsərüfatı, istixana,zavod və digər istehsal müəsisələrində havalandırma sistemlərinin quraşdılması</p>
+            <p>65 AZN-dən (Kvadrat/metr) başlayan qiymətlərlə</p>
           </div>
         </div>
         <div className='frame frame-bg'>
@@ -58,25 +57,27 @@ const Ventilation = () => {
         <Void />
         <div className='frame'>
           <div className="frame__content text-left">
-            <h3>Havalandirma sistemleri</h3>
-            <p>Havalandirma sistemleri,kanal tipli kondisioner sistemlerin quraşdirilma ve temiri isleri</p>
+            <h3> Kafe və Restoranlar üçün Havalandirma sİstemlerİ</h3>
+            <p>İctimai iaşə obyektləri üçün,kanal tipli kondisioner sistemlərinin istehsalı və quraşdirılması</p>
+            <p>62 AZN-dən (Kvadrat/metr) başlayan qiymətlərlə</p>
           </div>
         </div>
         <div className='frame frame-bg'>
           <div className="frame__content">
-            <main className="frame-media frame-media_right" style={{ backgroundImage: `url(${Havalandirma})` }}></main>
+            <main className="frame-media frame-media_right" style={{ backgroundImage: `url(${V2})` }}></main>
           </div>
         </div>
         <Void />
         <div className='frame metalFrame'>
           <div className="frame__content text-right">
-            <h3>Mətbəx üçün havalandırma</h3>
-            <p>Havalandirma zontlari ve davlumbazların istenilen ölçüde ve formada hazırlanması</p>
+            <h3>Mətbəx üçün havalandırma sİstemlərİ</h3>
+            <p>Havalandırma zontlarının istənilən ölçüdə və formada hazırlanması</p>
+            <p>62 AZN-dən (Kvadrat/metr) başlayan qiymətlərlə</p>
           </div>
         </div>
         <div className='frame frame-bg'>
           <div className="frame__content">
-            <div className="frame-media frame-media_left" style={{ backgroundImage: `url(${V2})` }}></div>
+            <div className="frame-media frame-media_left" style={{ backgroundImage: `url(${V3})` }}></div>
           </div>
         </div>
         <Void />

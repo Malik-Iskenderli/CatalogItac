@@ -8,8 +8,8 @@ const MetalConstructiuonText = () => {
 
     <div className='frame'>
       <div className="frame__content text-right">
-        <h3>Metal konstrukciya isleri</h3>
-        <p>Kafe, restoran ve eyni zamanda diger teyinatli muesilerde sifaris esasinda metal konstrukciya islerin gorulmesi</p>
+        <h3>Metal konstruksİya İşlərİ</h3>
+        <p>Bütün növ müəsisələr və ictimai iaşə obyektləri üçün metal konstruksiya sistemlərinin istehsalı</p>
       </div>
     </div>
 

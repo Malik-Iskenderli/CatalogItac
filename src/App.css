@@ -80,7 +80,8 @@ h1, h2, h3, h4{
   background-size: cover;
 }
 .frame-media{
-  border-radius: 20%;
+  background-repeat: no-repeat;
+  background-size:contain;
 }
 video.frame-media_b{
   width: calc(var(--index) * var(--side-small) ) ;
@@ -110,7 +111,7 @@ video.frame-media_2{
   left: 18vw;
 }
 .frame h3{
-  font-size: calc(var(--index) * 3);
+  font-size: calc(var(--index) * 2.3);
 }
 .frame p {
   max-width: 30vw;
@@ -123,7 +124,7 @@ video.frame-media_2{
 }
 .fixed{
   width: 10%;
-  height: calc(var(--index) * (var(--side-big) / 2));
+  height: calc(100vh - 40%);
   position: fixed;
   left: 20px;
   top: 20% ;
@@ -132,7 +133,6 @@ video.frame-media_2{
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  /* background-color: red; */
   z-index: 9999999;
   transition: 0.4s ease-in;
 }
@@ -141,14 +141,78 @@ video.frame-media_2{
 .fix-btn-a_frame, .fix-btn-mtk, .fix-btn-door{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   cursor: pointer;
-  transition: 0.4s ease-in;
-  /* overflow: hidden; */
 }
 .fix-btn span, .fix-btn-vent span,
 .fix-btn-kitchen span, .fix-btn-decor span,
 .fix-btn-a_frame span, .fix-btn-mtk span, .fix-btn-door span{
-color: red;
-transition: 0.4s ease-in;
+color: rgb(224,90,190);
+opacity: 0;
+transition: 1s ease-in;
+}
+.icon-span{
+  margin-left: 0.8rem ;
+  font-size: 18px;
+}
+.active-icon {
+  width: 50px;
+  height: 50px; 
+  /* background-color: rgba(187, 0, 255, 0.3); */
+  /* border-radius:  0 50% 50% 0; */
+
+}
+.default-icon{
+width: 35px;
+height: 35px;
+}
+@media screen and (max-width:780px){
+  .fixed{
+    width: calc(100% - 150px);
+    height: 50px;
+    position: fixed;
+    left: calc(100% - 90%);
+    top: 90%;
+    display: flex;
+    flex-direction:row;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .icon-span{
+    margin-left: 0.2rem ;
+    font-size: 15px;
+  }
+  .active-icon {
+    width: 30px;
+    height: 30px;
+    /* background-image: linear-gradient(to left bottom, #aa43bd, #9e44c2, #9045c7, #8146cc, #6e48d1); */
+    /* border-radius:  50% 50% 0 0; */
+    /* padding: 5px 0; */
+  }
+  .default-icon{
+  width: 25px;
+  height: 25px;
+  }
+
+}
+@media screen and (max-width:350px){
+  .fixed{
+    width: calc(100% - 100px);
+    top: 93%;
+  }
+  .icon-span{
+    margin-left: 0.2rem ;
+    font-size: 12px;
+  }
+  .active-icon {
+    width: 25px;
+    height: 25px;
+    /* background-image: linear-gradient(to left bottom, #aa43bd, #9e44c2, #9045c7, #8146cc, #6e48d1); */
+    /* border-radius:  50% 50% 0 0; */
+    /* padding: 5px 0; */
+  }
+  .default-icon{
+  width: 20px;
+  height: 20px;
+  }
 }
