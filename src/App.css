@@ -198,6 +198,10 @@ height: 35px;
     font-size: 18px;
     
   }
+  .btn-home{
+    bottom: 80px;
+    right: -30px;
+  }
 
 }
 @media screen and (max-width:450px){
@@ -226,5 +230,9 @@ height: 35px;
     margin-top: 3vh;
     font-size: 10px;
     
+  }
+  .btn-home{
+    bottom: 80px;
+    right: -30px;
   }
 }

@@ -17,6 +17,7 @@ import DecorImage from '../components/DecorImage';
 import MtkText from '../components/MtkText';
 import MtkImage from '../components/MtkImage';
 import FixedPage from '../components/FixedPage';
+import BtnHome from '../components/Button/BtnHome';
 const Home = () => {
     const [zVals, setZVals] = useState([]);
 
@@ -51,7 +52,7 @@ const Home = () => {
     };
   }, []);
   const [activeSection, setActiveSection] = useState('');
-
+  const [see,setsee]=useState(false)
   useEffect(() => {
 
     const metalSectionTop = 0; 
@@ -64,6 +65,13 @@ const Home = () => {
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      const isAtPageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight;
+
+      if(scrollY === isAtPageBottom){
+        setsee(true)
+      }else{
+        setsee(false)
+      }
 
       if (scrollY >= metalSectionTop && scrollY < ventilationSectionTop) {
         setActiveSection('metal');
@@ -92,6 +100,7 @@ const Home = () => {
         <>
             <div className="container">
             <FixedPage activeSection={activeSection} />
+            {activeSection === 'mtk' ? <BtnHome/> : <></>}
                 <section className='gallery'>
                     <TitleName />
                     <Void />
@@ -130,3 +139,10 @@ const Home = () => {
 }
 
 export default Home
+
+
+
+
+
+
+
