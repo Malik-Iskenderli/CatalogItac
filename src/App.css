@@ -200,7 +200,7 @@ height: 35px;
   }
 
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:450px){
   .fixed{
     width: calc(100% - 50px);
     left: calc(100% - 94%);
